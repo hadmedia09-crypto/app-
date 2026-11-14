@@ -1,0 +1,20 @@
+{
+  "name": "worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../../.env src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@etr/channels": "workspace:*",
+    "@etr/core": "workspace:*",
+    "@etr/db": "workspace:*",
+    "bullmq": "^5.63.0",
+    "ioredis": "^5.8.2",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": { "@types/node": "^22.10.0", "typescript": "~5.9.3" }
+}

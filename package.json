@@ -1,0 +1,22 @@
+{
+  "name": "easytoreach",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter web --filter worker dev",
+    "build": "pnpm --filter web build",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @etr/db generate",
+    "db:migrate": "pnpm --filter @etr/db migrate",
+    "db:studio": "pnpm --filter @etr/db studio",
+    "gen:key": "node -e \"console.log(require('crypto').randomBytes(32).toString('base64'))\"",
+    "start": "pnpm --filter web start",
+    "start:worker": "pnpm --filter worker start"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
